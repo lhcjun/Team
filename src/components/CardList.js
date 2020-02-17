@@ -12,9 +12,9 @@ const CardList = ( { members } ) => {
                             id = { members[i].id } 
                             name = { members[i].name } 
                             email = { members[i].email }
-                            bs = { members[i].bs }
+                            bs = { members[i].company.bs }
                         />)
-                    })
+                })
             };
         </div>
     );
