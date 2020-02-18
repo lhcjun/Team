@@ -13,7 +13,7 @@ export const setSearchField = text => ({
 
 export const requestMembers = () => dispatch => {
     dispatch ( { type: REQUEST_MEMBERS_PENDING } );
-    apiCall('https://jsonplaceholder.typicode.com/users')
+    apiCall('https://jsonplaceholder.typicode.com/users', {mode: 'no-cors'})
         .then(data => dispatch({ type: REQUEST_MEMBERS_SUCCESS, payload: data }))
         .catch(error => dispatch({ type: REQUEST_MEMBERS_FAILED, payload: error }))
 }
